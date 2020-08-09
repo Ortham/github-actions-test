@@ -17,6 +17,7 @@ jobs:
     runs-on: windows-2016
     steps:
       - name: Print tool_cache path
+        shell: bash
         run: |
           echo ${{ runner.tool_cache }}
           ls -la ${{ runner.tool_cache }}
