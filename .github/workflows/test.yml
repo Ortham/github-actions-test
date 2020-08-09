@@ -30,6 +30,7 @@ jobs:
           ls -la ${{ runner.tool_cache }}
           
       - name: Print Python directory structure
+        shell: bash
         run: |
           ls -la ${{ runner.tool_cache }}/Python
           ls -la ${{ runner.tool_cache }}/Python/3.7.8
