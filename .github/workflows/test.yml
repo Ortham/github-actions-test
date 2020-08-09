@@ -13,6 +13,13 @@ jobs:
           echo ${{ runner.tool_cache }}
           ls -la ${{ runner.tool_cache }}
           
+      - name: Print Python directory structure
+        run: |
+          ls -la ${{ runner.tool_cache }}/Python
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8/x64
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8/x64/Scripts
+          
   windows:
     runs-on: windows-2016
     steps:
@@ -21,5 +28,12 @@ jobs:
         run: |
           echo ${{ runner.tool_cache }}
           ls -la ${{ runner.tool_cache }}
+          
+      - name: Print Python directory structure
+        run: |
+          ls -la ${{ runner.tool_cache }}/Python
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8/x64
+          ls -la ${{ runner.tool_cache }}/Python/3.7.8/x64/Scripts
     
 
