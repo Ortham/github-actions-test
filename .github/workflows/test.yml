@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print tool_cache path
+        run: |
+          echo ${{ runner.tool_cache }}
+          ls -la ${{ runner.tool_cache }}
+          
+  windows:
+    runs-on: windows-2016
+    steps:
+      - name: Print tool_cache path
+        run: |
+          echo ${{ runner.tool_cache }}
+          ls -la ${{ runner.tool_cache }}
+    
+
